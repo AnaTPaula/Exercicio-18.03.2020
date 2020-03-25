@@ -1,5 +1,11 @@
 package br.fai.exercicio18032020;
 
-public class Animal {
+public abstract class Animal {
+	
+	int id;
+	String nome;
+	
+	
+	
 
 }
