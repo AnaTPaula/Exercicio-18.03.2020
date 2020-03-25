@@ -24,7 +24,19 @@ public class Main {
 	private void start() {
 		
 		 int opcao = 0;
-		 int i;
+		 
+			System.out.println("------------------------------------------------------------");
+			System.out.println("                     CLINICA DE ANIMAIS                     ");
+			System.out.println("1. Cadastrar Cavalo");
+			System.out.println("2. Cadastrar Girrafa");
+			System.out.println("3. Listar Cavalos");
+			System.out.println("4. Listar Girrafas");
+			System.out.println("5. Listar todos os animais");
+			System.out.println("6. Remover um animal por ID");
+			System.out.println("7. Exibir a quantidade de animais cadastrados por tipo");
+			System.out.println("8. Sair: ");
+			System.out.println("Opção: ");
+			System.out.println("------------------------------------------------------------");
 	    
 	        
 	        do{
@@ -75,7 +87,7 @@ public class Main {
 	            	idRemover = entrada.nextInt();
 	            	entrada.nextLine();
 	            	
-	            	for (int = 0; i < listaDeCavalos.size(); i++)
+	            	for (int i = 0; i < listaDeCavalos.size(); i++)
 	            	{
 	            		Cavalo cavalo = listaDeCavalos.get(i);
 	            		if (cavalo.getID() == idRemover)
@@ -87,7 +99,7 @@ public class Main {
 	            	
 	            	if (!encontrou)
 	            	{
-	            		for (int i = ;i <listaDeGirafas.size(); i++)
+	            		for (int i = 0; i <listaDeGirafas.size(); i++)
 	            		{
 	            			Girafa girafa = listaDeGirafas.get(i);
 	            			if(girafa.getID() == idRemover)
@@ -105,7 +117,15 @@ public class Main {
 	            
 	            case 7:
 	            {
-	            	menu();
+	            	System.out.println("--------------------------------");
+					System.out.println("Número de cavalos cadastrados: " + listaDeCavalos.size());
+					listarCavalos();
+					System.out.println("--------------------------------");
+					System.out.println("Número de girafas cadastradas: " + listaDeGirafas.size());
+					listarGirafas();
+					System.out.println("--------------------------------");
+					System.out.println("Total de animais cadastrados: " + mapaDeAnimais.size());
+					System.out.println("--------------------------------");
 	            }
 	            
 	            case 8: 
@@ -119,26 +139,9 @@ public class Main {
 	            }
 	            break;
 	            
-	        } while(opcao != 8);
+	        } while(opcao != 0);
 	    }
 	
-
-	public void menu() {
-		
-		System.out.println("------------------------------------------------------------");
-		System.out.println("                     CLINICA DE ANIMAIS                     ");
-		System.out.println("1. Cadastrar Cavalo");
-		System.out.println("2. Cadastrar Girrafa");
-		System.out.println("3. Listar Cavalos");
-		System.out.println("4. Listar Girrafas");
-		System.out.println("5. Listar todos os animais");
-		System.out.println("6. Remover um animal por ID");
-		System.out.println("7. Exibir a quantidade de animais cadastrados por tipo");
-		System.out.println("8. Sair: ");
-		System.out.println("Opção: ");
-		System.out.println("------------------------------------------------------------");
-	}
-
 
 
 private void cadastrarCavalo() {
