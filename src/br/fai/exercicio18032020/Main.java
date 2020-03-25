@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class Main {
 
+	Scanner entrada = new Scanner(System.in);
+	
 	public static void main(String[] args) {
 		
 		Main app = new Main();
@@ -12,12 +14,14 @@ public class Main {
 
 	private void start() {
 		
-		 int opcao;
-	     Scanner entrada = new Scanner(System.in);
+		 int opcao = 0;
+	    
 	        
 	        do{
-	            menu();
+	            System.out.println("Digite o número da opção: "); 
 	            opcao = entrada.nextInt();
+	            entrada.nextLine();
+	            
 	            
 	            switch(opcao){
 	            case 1:
